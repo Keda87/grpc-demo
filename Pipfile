@@ -1,0 +1,13 @@
+[[source]]
+name = "pypi"
+url = "https://pypi.org/simple"
+verify_ssl = true
+
+[dev-packages]
+
+[packages]
+grpcio = "~=1.19.0"
+grpcio-tools = "~=1.19.0"
+
+[requires]
+python_version = "3.6"
