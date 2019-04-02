@@ -21,6 +21,7 @@ class DigestorServicer(digestor_pb2_grpc.DigestorServicer):
 
         # get the string from the incoming request.
         to_be_digested = request.ToDigest
+        print(f'String to be digest received: {to_be_digested}')
 
         # digest and get the string representation
         # from the digestor.

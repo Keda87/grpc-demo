@@ -1,4 +1,5 @@
 import grpc
+
 import digestor_pb2
 import digestor_pb2_grpc
 
@@ -15,8 +16,8 @@ class DigestorClient(object):
         self.stub = digestor_pb2_grpc.DigestorStub(self.channel)
 
     def get_digest(self, message: str):
-        result = digestor_pb2.DigestMessage(ToDigest=message)
-        return self.stub.GetDigestor(result)
+        r = digestor_pb2.DigestMessage(ToDigest=message)
+        return self.stub.GetDigestor(r)
 
 
 if __name__ == '__main__':
